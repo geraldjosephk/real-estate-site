@@ -1,5 +1,6 @@
 db.sqlite
 *log
 /env3
-/media
+*/static
+static
 *__pycache__
