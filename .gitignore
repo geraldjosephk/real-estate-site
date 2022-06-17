@@ -4,3 +4,4 @@ db.sqlite
 */static
 static
 *__pycache__
+.vscode/
