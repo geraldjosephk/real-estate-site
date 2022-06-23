@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'phonenumber_field',
     'realtors.apps.RealtorsConfig',
     'listings.apps.ListingsConfig',
     'pages.apps.PagesConfig',
@@ -116,6 +117,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+PHONENUMBER_DEFAULT_FORMAT = 'INTERNATIONAL'
+PHONENUMBER_DB_FORMAT = 'INTERNATIONAL'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -125,6 +129,10 @@ STATIC_ROOT = os.path.join(BASE_DIR , 'static')
 STATICFILES_DIRS  = [
     os.path.join(BASE_DIR,'realestate/static')
 ]
+
+# Media folder settings
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
