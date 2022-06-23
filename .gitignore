@@ -5,3 +5,4 @@ db.sqlite
 static
 *__pycache__
 .vscode/
+/media
