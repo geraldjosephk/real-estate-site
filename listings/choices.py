@@ -1,14 +1,14 @@
 bedroom_choices = {
-    '1':'1',
-    '2':'2',
-    '3':'3',
-    '4':'4',
-    '5':'5',
-    '6':'6',
-    '7':'7',
-    '8':'8',
-    '9':'9',
-    '10':'10'
+    '1':1,
+    '2':2,
+    '3':3,
+    '4':4,
+    '5':5,
+    '6':6,
+    '7':7,
+    '8':8,
+    '9':9,
+    '10':10
 }
 
 price_choices = {
@@ -25,9 +25,8 @@ price_choices = {
 }
 
 state_choices = {
-    'LU': 'Lubaga',
-    'MA': 'Makindye',
-    'BU': 'Busiro',
-    'KA': 'Kawempe',
-    'KI': 'Kiira',
+    'Central':'Central',
+    'West':'West',
+    'North':'North',
+    'East':'East'
 }

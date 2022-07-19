@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render
 from .models import Listing
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .choices import state_choices,bedroom_choices,price_choices
+from django.db.models import Q
 
 # Create your views here.
 def index(request):
@@ -40,13 +41,13 @@ def search(request):
         city = request.GET['city']
         if city:
             queryset_list = queryset_list.filter(city__iexact=city)
-
+    
     #State
     if 'state' in request.GET:
         state = request.GET['state']
         if state:
             queryset_list = queryset_list.filter(state__iexact=state)
-
+    
     #Bedrooms
     if 'bedrooms' in request.GET:
         bedrooms = request.GET['bedrooms']
@@ -60,9 +61,10 @@ def search(request):
             queryset_list = queryset_list.filter(price__lte=price)
 
     context = {
-        'listing' : queryset_list,
         'bedroom_choices': bedroom_choices,
         'price_choices' : price_choices,
-        'state_choices' : state_choices
+        'state_choices' : state_choices,
+        'listings' : queryset_list,
+        'values': request.GET
     }
     return render(request, 'listings/search.html',context)
