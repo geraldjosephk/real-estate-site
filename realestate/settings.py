@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'phonenumber_field',
+    'contacts.apps.ContactsConfig',
     'accounts.apps.AccountsConfig',
     'realtors.apps.RealtorsConfig',
     'listings.apps.ListingsConfig',
